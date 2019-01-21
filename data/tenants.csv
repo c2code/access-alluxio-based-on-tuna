@@ -1,0 +1,5 @@
+p, superAdmin, domain1, /domain1/*, *
+p, user1, domain1, /domain1/user1/*, *
+p, user2, domain1, /domain1/user2/*, *
+p, domain3, domain3, /domain3/*, *
+g, user1, user1, domain1

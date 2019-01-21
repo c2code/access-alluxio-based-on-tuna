@@ -1,0 +1,3 @@
+
+{"level":"info","timestamp":"2019-01-21T10:53:08.268+0800","logger":"Cmd","caller":"cmd/root.go:92","message":"Cobra init done"}
+{"level":"info","timestamp":"2019-01-21T10:53:08.268+0800","logger":"Cmd","caller":"cmd/run.go:25","message":"Enter Run"}

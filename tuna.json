@@ -1,0 +1,9 @@
+{
+    "log_config": "log.json",
+    "manager": {
+        "maxworker": 20,
+        "webport": 8088,
+        "reqtimeout": 10000,
+        "debug": false
+    }
+}

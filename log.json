@@ -1,0 +1,21 @@
+{
+    "json": true,
+    "level": -1,
+    "selectors": [],
+
+    "to_observer": false,
+    "to_stderr": false,
+    "to_files": true,
+
+    "files": {
+        "path": "logs",
+        "name": "tuna.log",
+        "maxsize": 5,
+        "maxbackups": 2000,
+        "maxage": 20,
+        "compress": false
+    },
+
+    "add_caller": true,
+    "development": true
+}
