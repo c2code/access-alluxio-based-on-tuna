@@ -20,16 +20,16 @@ const (
 
 // Request Type
 const (
-	RequestExample              = "RequestExample"
-	RequestRbactCreateUser      = "RequestRbactCreateUser"
-	RequestRbactDeleteUser      = "RequestRbactDeleteUser"
-	RequestRbactCreateFile      = "RequestRbactCreateFile"
-	RequestRbactWriteContent    = "RequestRbactWriteContent"
-	RequestRbactOpenFile        = "RequestRbactOpenFile"
-	RequestRbactReadContent     = "RequestRbactReadContent"
-	RequestRbactCloseFile       = "RequestRbactCloseFile"
-	RequestRbactDeleteFile      = "RequestRbactDeleteFile"
-	RequestRbactRenameFile      = "RequestRbactRenameFile"
+	RequestExample                = "RequestExample"
+	RequestAlluxioCreateUser      = "RequestAlluxioCreateUser"
+	RequestAlluxioDeleteUser      = "RequestAlluxioDeleteUser"
+	RequestAlluxioCreateFile      = "RequestAlluxioCreateFile"
+	RequestAlluxioWriteContent    = "RequestAlluxioWriteContent"
+	RequestAlluxioOpenFile        = "RequestAlluxioOpenFile"
+	RequestAlluxioReadContent     = "RequestAlluxioReadContent"
+	RequestAlluxioCloseFile       = "RequestAlluxioCloseFile"
+	RequestAlluxioDeleteFile      = "RequestAlluxioDeleteFile"
+	RequestAlluxioRenameFile      = "RequestAlluxioRenameFile"
 )
 
 // API response error code

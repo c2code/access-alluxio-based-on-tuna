@@ -39,17 +39,17 @@ func (m Manager) work(workID string) {
 			workerCtx.workerRequest = tmp
 
 			switch workerCtx.workerRequest.Type {
-			case RequestExample:
-				m.exampleWorkerHandle(workerCtx) //it has not been run, it is only a example
-			case RequestRbactCreateUser,
-				RequestRbactDeleteUser,
-			    RequestRbactCreateFile,
-				RequestRbactWriteContent,
-			    RequestRbactOpenFile,
-				RequestRbactReadContent,
-			    RequestRbactDeleteFile,
-			    RequestRbactRenameFile:
-				m.rbactWorkerHandle(workerCtx)
+			//case RequestExample:
+				//m.exampleWorkerHandle(workerCtx) //it has not been run, it is only a example
+			case RequestAlluxioCreateUser,
+				RequestAlluxioDeleteUser,
+			    RequestAlluxioCreateFile,
+				RequestAlluxioWriteContent,
+			    RequestAlluxioOpenFile,
+				RequestAlluxioReadContent,
+			    RequestAlluxioDeleteFile,
+			    RequestAlluxioRenameFile:
+				m.alluxioWorkerHandle(workerCtx)
 			default:
 				logger.Errorf("Unexpected worker request type: %s", workerCtx.workerRequest.Type)
 			}

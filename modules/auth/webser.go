@@ -28,9 +28,8 @@ func (m Manager) webListen() {
 	//provide a internal access rest api
 	tuna_v1:= router.Group("/")
 	{
-		//tuna_v1.POST("/example", m.exampleRestCall)
-		tuna_v1.POST("/create-user", m.rbactRestCall)
-		tuna_v1.POST("/delete-user", m.rbactRestCall)
+		tuna_v1.POST("/create-user", m.alluxioRestCall)
+		tuna_v1.POST("/delete-user", m.alluxioRestCall)
 	}
 
 	//provide a external access rest api
@@ -40,13 +39,13 @@ func (m Manager) webListen() {
 		tuna_v2.GET("/log-level", m.onGetLogLevel) //get log level
 		tuna_v2.POST("/log-level", m.onSetLogLevel) //set log level
 
-		tuna_v2.POST("/create-file", m.rbactRestCall)
-		tuna_v2.POST("/write-content", m.rbactRestCall)
-		tuna_v2.POST("/open-file", m.rbactRestCall)
-		tuna_v2.POST("/read-content", m.rbactRestCall)
-		tuna_v2.POST("/close-file", m.rbactRestCall)
-		tuna_v2.POST("/delete-file", m.rbactRestCall)
-		tuna_v2.POST("/rename-file", m.rbactRestCall)
+		tuna_v2.POST("/create-file", m.alluxioRestCall)
+		tuna_v2.POST("/write-content", m.alluxioRestCall)
+		tuna_v2.POST("/open-file", m.alluxioRestCall)
+		tuna_v2.POST("/read-content", m.alluxioRestCall)
+		tuna_v2.POST("/close-file", m.alluxioRestCall)
+		tuna_v2.POST("/delete-file", m.alluxioRestCall)
+		tuna_v2.POST("/rename-file", m.alluxioRestCall)
 	}
 
 	portSpec := fmt.Sprintf(":%d", m.config.WebPort)
