@@ -15,7 +15,9 @@ const (
 
 // Content Types
 const (
-	ContentTypeJSON   = "application/json"
+	ContentTypeJSON      = "application/json"
+	ContentTypeStream    = "application/octet-stream"
+	ContentTypeFormData  = "multipart/form-data"
 )
 
 // Request Type
@@ -30,6 +32,8 @@ const (
 	RequestAlluxioCloseFile       = "RequestAlluxioCloseFile"
 	RequestAlluxioDeleteFile      = "RequestAlluxioDeleteFile"
 	RequestAlluxioRenameFile      = "RequestAlluxioRenameFile"
+	RequestAlluxioUploadFile      = "RequestAlluxioUploadFile"
+	RequestAlluxioReadFile        = "RequestAlluxioReadFile"
 )
 
 // API response error code
@@ -44,10 +48,11 @@ const (
 	ErrCodeReadFail            = 7
 	ErrCodeCreateFileFail      = 8
 	ErrCodeWriteFail           = 9
-	ErrCodeCreateUserFail      = 10
-	ErrCodeDeleteUserFail      = 11
+	ErrCodeAllocateResFail     = 10
+	ErrCodeDeleteResFail       = 11
 	ErrCodeDeleteFileFail      = 12
 	ErrCodeRenameFileFail      = 13
+	ErrCodeUploadFileFail      = 14
 )
 
 // API response error info
@@ -61,10 +66,11 @@ const (
 	ErrInfoReadFail            = "ErrInfoReadFail"
 	ErrInfoCreateFileFail      = "ErrInfoCreateFail"
 	ErrInfoWriteFail           = "ErrInfoWriteFail"
-	ErrInfoCreateUserFail      = "ErrInfoCreateUserFail"
-	ErrInfoDeleteUserFail      = "ErrInfoDeleteUserFail"
+	ErrInfoAllocateResFail     = "ErrInfoAllocateResFail"
+	ErrInfoDeleteResFail       = "ErrInfoDeleteResFail"
 	ErrInfoDeleteFileFail      = "ErrInfoDeleteFileFail"
 	ErrInfoRenameFileFail      = "ErrInfoRenameFileFail"
+	ErrInfoUploadFileFail      = "ErrInfoUploadFileFail"
 )
 
 // BaseResponse definition

@@ -8,6 +8,7 @@ import (
 	"time"
 	"github.com/casbin/casbin"
 	alluxio "github.com/Alluxio/alluxio-go"
+	"github.com/gin-gonic/gin"
 )
 
 
@@ -25,11 +26,12 @@ type Manager struct {
 
 // WorkerRequest request wrapper
 type WorkerRequest struct {
-	Type     string
-	GUID     string
-	Body     interface{}
-	RspChan  chan interface{}
-	DoneChan chan bool
+	Type           string
+	GUID           string
+	GinContext     *gin.Context
+	Body           interface{}
+	RspChan        chan interface{}
+	DoneChan       chan bool
 }
 
 func Run() {
@@ -55,7 +57,7 @@ func Run() {
 	manager.rbact = casbin.NewEnforcer("./data/tenants.conf", "./data/tenants.csv")
 
 	//start alluxio agent
-	manager.fs = alluxio.NewClient("localhost", 39999, 10*time.Second)
+	manager.fs = alluxio.NewClient("172.25.0.113", 39999, 10*time.Second)
 
 	//to select a free worker  to handle task
 	go manager.dispatch()

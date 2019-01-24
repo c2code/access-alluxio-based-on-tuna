@@ -48,7 +48,9 @@ func (m Manager) work(workID string) {
 			    RequestAlluxioOpenFile,
 				RequestAlluxioReadContent,
 			    RequestAlluxioDeleteFile,
-			    RequestAlluxioRenameFile:
+			    RequestAlluxioRenameFile,
+				RequestAlluxioUploadFile,
+				RequestAlluxioReadFile:
 				m.alluxioWorkerHandle(workerCtx)
 			default:
 				logger.Errorf("Unexpected worker request type: %s", workerCtx.workerRequest.Type)
